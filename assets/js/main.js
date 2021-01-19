@@ -30,6 +30,8 @@ const app = new Vue({
                 contactInfoBg: "#21333e",
                 blueLagoon: "#048383",
                 fountainBlueFade: "rgb(82 186 187 / 27%)",
+                woodSmoke: "#111117",
+                shark: "#1d2528",
             },
         },
         fonts: {
@@ -41,6 +43,24 @@ const app = new Vue({
         navbar: {
             links: ["HOME", "ABOUT", "SERVICES", "TEAM", "BLOG"],
         },
+        sectionResults: [
+            {
+                number: 128,
+                label: "Certifications",
+            },
+            {
+                number: 230,
+                label: "Employees",
+            },
+            {
+                number: 517,
+                label: "Customers",
+            },
+            {
+                number: 94,
+                label: "Countries Served",
+            },
+        ],
     },
     methods: {
         mainStyle(text, bg, font) {

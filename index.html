@@ -108,7 +108,7 @@
                 </section>
             </header>
             <main>
-                <section class="performance">
+                <section class="performance p-section">
                     <small :style="mainStyle(colors.text.blueLagoon)"
                         >INTRODUCTION VIDEO</small
                     >
@@ -146,11 +146,82 @@
                         ></i>
                     </div>
                 </section>
-                <section class="results">
-                    <!-- h: 589 -->
+                <section
+                    class="results p-section"
+                    :style="mainStyle(colors.text.white, 'black')"
+                >
+                    <small :style="mainStyle(colors.text.blueLagoon)"
+                        >WHAT ARE WE DOING</small
+                    >
+                    <h2
+                        :style="mainStyle(colors.text.white, 'none', fonts.sectionTitle)"
+                    >
+                        <span
+                            :style="mainStyle('inherit', colors.background.fountainBlueFade)"
+                            class="title-bg"
+                            >Results</span
+                        >
+                        <span>in Numbers</span>
+                    </h2>
+                    <ul class="numbers container">
+                        <li v-for="result in sectionResults">
+                            <span
+                                :style="mainStyle(colors.text.blueLagoon, 'none', '2.5rem')"
+                                >{{result.number}}</span
+                            >
+                            <span
+                                :style="mainStyle('inherit', 'none', '1.6rem')"
+                                >{{result.label}}</span
+                            >
+                        </li>
+                    </ul>
                 </section>
-                <section class="services">
-                    <!-- h: 1089 -->
+                <section
+                    class="services p-section"
+                    :style="mainStyle(colors.text.white, colors.background.woodSmoke)"
+                >
+                    <div class="content container">
+                        <small
+                            :style="mainStyle(colors.text.blueLagoon)"
+                            class="m-small"
+                            >OUR BUSINESS AREAS</small
+                        >
+                        <h2
+                            :style="mainStyle(colors.text.white, 'none', fonts.sectionTitle)"
+                        >
+                            <span>Excellence in</span>
+                            <span
+                                :style="mainStyle('inherit', colors.background.fountainBlueFade)"
+                                class="title-bg"
+                                >Services</span
+                            >
+                        </h2>
+                        <div class="content-pair dflex">
+                            <p
+                                class="light-weight"
+                                :style="mainStyle(colors.text.silverSand, 'none', fonts.large)"
+                            >
+                                We are leaders in prividing consultancy services
+                                with a set of cutting-edge technologies and a
+                                team of experienced and renowned professionals.
+                                These are some options that you can hire.
+                            </p>
+                            <a
+                                href=""
+                                class="btn"
+                                :style="mainStyle(colors.text.white, 'none', fonts.mid)"
+                                >SEE ALL</a
+                            >
+                        </div>
+                        <div class="services-cards">
+                            <div class="card">ciao</div>
+                            <div class="card">ciao</div>
+                            <div class="card">ciao</div>
+                            <div class="card">ciao</div>
+                            <div class="card">ciao</div>
+                            <div class="card">ciao</div>
+                        </div>
+                    </div>
                 </section>
                 <section class="team">
                     <!-- h: 798 -->
