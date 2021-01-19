@@ -9,11 +9,87 @@
 }
 body {
     min-height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Roboto", sans-serif;
+}
+span {
+    display: inline-block;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* utility */
+.dflex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn {
+    padding: 0.7rem 0.9rem;
+    border-radius: 0.2rem;
+    border: 1px solid #048383;
 }
 
+/** HEADER */
+header .contact-info {
+    height: 50px;
+}
+header .contact-info .content {
+    height: 100%;
+}
+header .contact-info .content .other-info a:not(:last-child) {
+    margin-right: 30px;
+}
+header .contact-info .content i {
+    margin-right: 5px;
+}
+
+.company-logo {
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+.company-logo .first-half {
+    padding: 0.5rem 0;
+    padding-left: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+.company-logo .second-half {
+    padding-left: 4px;
+}
 .hero {
     height: 919px;
     background-image: url("../images/bg-2.jpg");
     background-size: cover;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    /* overlay effect */
+    background-color: #00000057;
+    background-blend-mode: color;
+}
+
+.navbar {
+    padding-top: 20px;
+}
+.navbar .right-content a:not(:last-child) {
+    margin-right: 30px;
+}
+
+.claim {
+    place-self: center;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.claim h1 {
+    font-weight: 900;
+}
+.claim-message {
+    margin: 40px 0;
+    line-height: 1.5rem;
+}
+.claim .buttons-pair > a:first-child {
+    margin-right: 20px;
 }

@@ -16,13 +16,30 @@ const app = new Vue({
             },
         },
         colors: {
-            topHeaderBg: "#21333e",
-            silverSand: "#bcbdbd",
+            text: {
+                silverSand: "#bcbdbd",
+                white: "#fff",
+                blueLagoon: "#048383",
+                fountainBlue: "#52babb",
+            },
+            background: {
+                contactInfoBg: "#21333e",
+                blueLagoon: "#048383",
+                fountainBlueFade: "rgb(82 186 187 / 27%)",
+            },
+        },
+        fonts: {
+            small: "12px",
+            mid: "14px",
+            large: "18px",
+        },
+        navbar: {
+            links: ["HOME", "ABOUT", "SERVICES", "TEAM", "BLOG"],
         },
     },
     methods: {
-        mainColors(text, bg) {
-            return `color: ${text}; background-color: ${bg}`;
+        mainStyle(text, bg, font) {
+            return `color: ${text}; background-color: ${bg}; font-size: ${font}`;
         },
     },
 });

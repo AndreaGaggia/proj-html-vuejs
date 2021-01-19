@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>proj-html-vuejs</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+            integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+            crossorigin="anonymous"
+        />
         <link rel="stylesheet" href="./assets/css/style.css" />
     </head>
     <body>
@@ -11,18 +22,87 @@
             <header>
                 <div
                     class="contact-info"
-                    :style="mainColors(colors.silverSand, colors.topHeaderBg)"
+                    :style="mainStyle(colors.text.silverSand, colors.background.contactInfoBg, fonts.small)"
                 >
-                    <div class="content container">contact infos + icons</div>
+                    <div class="content container dflex">
+                        <a href="#"
+                            ><i :class="contactInfo.hours.icon"></i
+                            >{{contactInfo.hours.text}}</a
+                        >
+                        <span class="other-info">
+                            <a href="#"
+                                ><i :class="contactInfo.tel.icon"></i
+                                >{{contactInfo.tel.text}}</a
+                            >
+                            <a href="#"
+                                ><i :class="contactInfo.mail.icon"></i
+                                >{{contactInfo.mail.text}}</a
+                            >
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </span>
+                    </div>
                 </div>
                 <section class="hero">
-                    <nav class="navbar container">ciao</nav>
+                    <nav class="navbar container dflex">
+                        <div class="company-logo">
+                            <span
+                                class="first-half"
+                                :style="mainStyle(colors.text.fountainBlue, colors.background.fountainBlueFade)"
+                                >NEX</span
+                            ><span
+                                class="second-half"
+                                :style="mainStyle(colors.text.silverSand)"
+                                >GEN</span
+                            >
+                        </div>
+                        <div class="right-content dflex">
+                            <a
+                                href="#"
+                                v-for="link in navbar.links"
+                                :style="mainStyle(colors.text.white, 'none', fonts.mid)"
+                                >{{link}}</a
+                            >
+                            <a
+                                href="#"
+                                :style="mainStyle(colors.text.white, 'none', fonts.mid)"
+                                ><i class="far fa-user"></i
+                            ></a>
+                            <a
+                                href=""
+                                class="btn"
+                                :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
+                                >GET IN TOUCH</a
+                            >
+                        </div>
+                    </nav>
                     <div class="claim">
-                        <h1></h1>
-                        <p class="claim-message"></p>
+                        <h1
+                            :style="mainStyle(colors.text.white, 'none', '4rem')"
+                        >
+                            Financial Risks
+                        </h1>
+                        <p
+                            class="claim-message"
+                            :style="mainStyle(colors.text.silverSand, 'none', fonts.large)"
+                        >
+                            The right outcomes depend on continuous rigor in
+                            governance, models and processes across the finance
+                            function.
+                        </p>
                         <div class="buttons-pair">
-                            <a href="" class="btn"></a>
-                            <a href="" class="btn"></a>
+                            <a
+                                href=""
+                                class="btn"
+                                :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
+                                >GET IN TOUCH</a
+                            ><a
+                                href=""
+                                class="btn"
+                                :style="mainStyle(colors.text.white, 'none', fonts.mid)"
+                                >READ MORE</a
+                            >
                         </div>
                     </div>
                 </section>
