@@ -109,7 +109,42 @@
             </header>
             <main>
                 <section class="performance">
-                    <!-- h: 898 -->
+                    <small :style="mainStyle(colors.text.blueLagoon)"
+                        >INTRODUCTION VIDEO</small
+                    >
+                    <h2
+                        :style="mainStyle(colors.text.shark, 'none', fonts.sectionTitle)"
+                    >
+                        <span>Advisory</span>
+                        <span
+                            :style="mainStyle(colors.text.blueLagoon, colors.background.fountainBlueFade)"
+                            class="title-bg"
+                            >Performance</span
+                        >
+                    </h2>
+                    <p
+                        class="light-weight"
+                        :style="mainStyle(colors.text.abbey, 'none', fonts.large)"
+                    >
+                        Financial executives need to review their strategies,
+                        operating models and capabilities so that their areas
+                        can generate sound information for better decision
+                        making
+                    </p>
+                    <div
+                        class="video"
+                        :style="mainStyle('inherit', colors.background.fountainBlueFade)"
+                    >
+                        <i
+                            id="play-element-hover"
+                            class="fas fa-play"
+                            :style="mainStyle(colors.text.whiteLightFade, 'none', '5rem')"
+                        ></i>
+                        <i
+                            class="fas fa-play"
+                            :style="mainStyle(colors.text.blueLagoonLightFade, 'none', '5rem')"
+                        ></i>
+                    </div>
                 </section>
                 <section class="results">
                     <!-- h: 589 -->

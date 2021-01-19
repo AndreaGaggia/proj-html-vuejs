@@ -19,8 +19,12 @@ const app = new Vue({
             text: {
                 silverSand: "#bcbdbd",
                 white: "#fff",
+                whiteLightFade: "rgb(255 255 255 / 70%)",
                 blueLagoon: "#048383",
+                blueLagoonLightFade: "rgb(0 187 187 / 80%)",
                 fountainBlue: "#52babb",
+                shark: "#1d2528",
+                abbey: "#4e4f52",
             },
             background: {
                 contactInfoBg: "#21333e",
@@ -32,6 +36,7 @@ const app = new Vue({
             small: "12px",
             mid: "14px",
             large: "18px",
+            sectionTitle: "3rem",
         },
         navbar: {
             links: ["HOME", "ABOUT", "SERVICES", "TEAM", "BLOG"],

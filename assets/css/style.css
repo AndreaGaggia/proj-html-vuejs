@@ -18,6 +18,13 @@ a {
     color: inherit;
     text-decoration: none;
 }
+small {
+    font-weight: 700;
+}
+section h2 {
+    font-weight: 900;
+    margin-bottom: 20px;
+}
 /* utility */
 .dflex {
     display: flex;
@@ -29,7 +36,13 @@ a {
     border-radius: 0.2rem;
     border: 1px solid #048383;
 }
-
+.title-bg {
+    padding: 2px 1rem;
+    border-radius: 0.2rem;
+}
+.light-weight {
+    font-weight: 300;
+}
 /** HEADER */
 header .contact-info {
     height: 50px;
@@ -92,4 +105,41 @@ header .contact-info .content i {
 }
 .claim .buttons-pair > a:first-child {
     margin-right: 20px;
+}
+
+/** MAIN */
+/* section.performance */
+section.performance {
+    height: 898px;
+    width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 130px 0;
+}
+section.performance small {
+    margin-bottom: 30px;
+}
+section.performance p {
+    width: 750px;
+    margin: auto;
+    text-align: center;
+}
+section.performance .video {
+    width: 100%;
+    height: 400px;
+    background-image: url(../images/video-1.jpg);
+    background-size: contain;
+    background-blend-mode: overlay;
+    display: grid;
+    place-items: center;
+    position: relative;
+    margin-top: 50px;
+}
+#play-element-hover {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
