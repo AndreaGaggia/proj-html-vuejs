@@ -73,26 +73,32 @@ const app = new Vue({
             {
                 icon: "fas fa-sitemap",
                 title: "Audit & Assurance",
+                onHover: false,
             },
             {
                 icon: "fas fa-briefcase",
                 title: "Financial Advisory",
+                onHover: false,
             },
             {
                 icon: "fas fa-chart-bar",
                 title: "Analytics and M&A",
+                onHover: false,
             },
             {
                 icon: "fas fa-plane-departure",
                 title: "Middle Marketing",
+                onHover: false,
             },
             {
                 icon: "fas fa-globe",
                 title: "Legal Consulting",
+                onHover: false,
             },
             {
                 icon: "fas fa-inbox",
                 title: "Regulatory Risk",
+                onHover: false,
             },
         ],
         team: [
@@ -177,6 +183,12 @@ const app = new Vue({
                     return member.name;
                 }
             }
+        },
+        onHover(card) {
+            card.onHover = true;
+        },
+        notOnHover(card) {
+            card.onHover = false;
         },
     },
 });

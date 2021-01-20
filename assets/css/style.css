@@ -30,6 +30,7 @@ section h2 {
     font-weight: 900;
     margin-bottom: 20px;
 }
+
 /* utility */
 .dflex {
     display: flex;
@@ -40,6 +41,27 @@ section h2 {
     padding: 0.7rem 0.9rem;
     border-radius: 0.2rem;
     border: 1px solid #048383;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn.full {
+    background-color: #048383;
+}
+.btn.full:hover {
+    background-color: #52babb;
+    border-color: #52babb;
+}
+.btn.empty {
+    background-color: transparent;
+}
+.btn.empty:hover {
+    background-color: #048383;
+    color: #ffffff;
+}
+.btn.map {
+    color: #048383;
 }
 .title-bg {
     padding: 2px 1rem;
@@ -201,12 +223,29 @@ section.services .card {
     padding: 45px;
     border-radius: 0.5rem;
 }
+/* hover eff */
+section.services .card:hover {
+    position: relative;
+    bottom: 10px;
+}
+/* section.services .card:hover section.services .card-top i {
+    color: white !important;
+} */
 
 section.services .card-top {
     margin-bottom: 20px;
+    position: relative;
 }
-section.services .card-top i:last-child {
-    align-self: flex-start;
+section.services .card-top .arrow {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
 }
 
 /* section.team */

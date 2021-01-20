@@ -69,12 +69,7 @@
                                 :style="mainStyle(colors.text.white, 'none', fonts.mid)"
                                 ><i class="far fa-user"></i
                             ></a>
-                            <a
-                                href=""
-                                class="btn"
-                                :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
-                                >GET IN TOUCH</a
-                            >
+                            <a href="" class="btn full">GET IN TOUCH</a>
                         </div>
                     </nav>
                     <div class="claim">
@@ -92,17 +87,8 @@
                             function.
                         </p>
                         <div class="buttons-pair">
-                            <a
-                                href=""
-                                class="btn"
-                                :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
-                                >GET IN TOUCH</a
-                            ><a
-                                href=""
-                                class="btn"
-                                :style="mainStyle(colors.text.white, 'none', fonts.mid)"
-                                >READ MORE</a
-                            >
+                            <a href="" class="btn full">GET IN TOUCH</a
+                            ><a href="" class="btn empty">READ MORE</a>
                         </div>
                     </div>
                 </section>
@@ -206,28 +192,29 @@
                                 team of experienced and renowned professionals.
                                 These are some options that you can hire.
                             </p>
-                            <a
-                                href=""
-                                class="btn"
-                                :style="mainStyle(colors.text.white, 'none', fonts.mid)"
-                                >SEE ALL</a
-                            >
+                            <a href="" class="btn empty">SEE ALL</a>
                         </div>
                         <div class="services-cards">
                             <div
                                 class="card"
                                 :style="mainStyle('inherit', colors.background.cardBg)"
                                 v-for="card in servicesCards"
+                                @mouseenter="onHover(card)"
+                                @mouseleave="notOnHover(card)"
                             >
                                 <div
                                     class="card-top dflex"
-                                    :style="mainStyle(colors.text.blueLagoon)"
+                                    :style="card.onHover ? mainStyle('white') : mainStyle(colors.text.blueLagoon)"
                                 >
                                     <i
                                         :class="card.icon"
                                         :style="mainStyle('inherit', 'none', '2rem')"
                                     ></i>
-                                    <i class="fas fa-arrow-right"></i>
+                                    <span
+                                        class="arrow"
+                                        :style="card.onHover ? mainStyle('white', colors.background.blueLagoon) : mainStyle(colors.text.blueLagoon, 'transparent')"
+                                        ><i class="fas fa-arrow-right"></i
+                                    ></span>
                                 </div>
                                 <h3
                                     class="m-small"
@@ -236,7 +223,7 @@
                                     {{card.title}}
                                 </h3>
                                 <p
-                                    :style="mainStyle(colors.text.silverSand, 'none')"
+                                    :style="card.onHover ? mainStyle('white') : mainStyle(colors.text.silverSand)"
                                 >
                                     Lorem ipsum, dolor sit amet consectetur
                                     adipisicing elit. Ratione, quisquam!
@@ -393,12 +380,7 @@
                                 Every week we publish content about what is best
                                 in the business world.
                             </p>
-                            <a
-                                href=""
-                                class="btn"
-                                :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
-                                >SEE ALL</a
-                            >
+                            <a class="btn full">SEE ALL</a>
                         </div>
                         <div class="news-cards">
                             <div
@@ -462,8 +444,7 @@
                             <input
                                 type="submit"
                                 value="SUBSCRIBE"
-                                class="btn"
-                                :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
+                                class="btn full"
                             />
                         </form>
                     </div>
@@ -526,8 +507,7 @@
                                 <input
                                     type="submit"
                                     value="SEND"
-                                    class="btn"
-                                    :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
+                                    class="btn full"
                                 />
                             </form>
                         </div>
@@ -587,10 +567,7 @@
                                             >{{contactInfo.address.text}}</span
                                         >
                                     </p>
-                                    <a
-                                        href="#"
-                                        class="btn"
-                                        :style="mainStyle('inherit', 'none', fonts.mid)"
+                                    <a href="#" class="map btn empty"
                                         >VIEW MAP</a
                                     >
                                 </div>
@@ -645,12 +622,7 @@
                                 </p>
                             </div>
                             <span>
-                                <a
-                                    href=""
-                                    class="btn"
-                                    :style="mainStyle(colors.text.white, 'none', fonts.mid)"
-                                    >GET IN TOUCH</a
-                                >
+                                <a href="" class="btn empty">GET IN TOUCH</a>
                             </span>
                         </div>
                         <div
