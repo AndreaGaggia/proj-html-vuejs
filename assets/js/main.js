@@ -25,6 +25,8 @@ const app = new Vue({
                 fountainBlue: "#52babb",
                 shark: "#1d2528",
                 abbey: "#4e4f52",
+                greyNurse: "#e7eee9",
+                abbeyFade: "rgb(78 79 82 / 70%)",
             },
             background: {
                 contactInfoBg: "#21333e",
@@ -32,6 +34,7 @@ const app = new Vue({
                 fountainBlueFade: "rgb(82 186 187 / 27%)",
                 woodSmoke: "#111117",
                 shark: "#1d2528",
+                cardBg: "#19191f",
             },
         },
         fonts: {
@@ -61,10 +64,65 @@ const app = new Vue({
                 label: "Countries Served",
             },
         ],
+        servicesCards: [
+            {
+                icon: "fas fa-sitemap",
+                title: "Audit & Assurance",
+            },
+            {
+                icon: "fas fa-briefcase",
+                title: "Financial Advisory",
+            },
+            {
+                icon: "fas fa-chart-bar",
+                title: "Analytics and M&A",
+            },
+            {
+                icon: "fas fa-plane-departure",
+                title: "Middle Marketing",
+            },
+            {
+                icon: "fas fa-globe",
+                title: "Legal Consulting",
+            },
+            {
+                icon: "fas fa-inbox",
+                title: "Regulatory Risk",
+            },
+        ],
+        team: [
+            {
+                name: "David Cooper",
+                role: "CTO & CO-FOUNDER",
+                img: "./assets/images/team-1.jpg",
+            },
+            {
+                name: "Emma Lopez",
+                role: "CHIEF MARKETING",
+                img: "./assets/images/team-2.jpg",
+            },
+            {
+                name: "Oliver Jones",
+                role: "CHIEF PROCUREMENT",
+                img: "./assets/images/team-3.jpg",
+            },
+            {
+                name: "T. Johnson",
+                role: "CTO & PRESIDENT",
+                img: "./assets/images/team-4.jpg",
+            },
+        ],
     },
     methods: {
         mainStyle(text, bg, font) {
             return `color: ${text}; background-color: ${bg}; font-size: ${font}`;
+        },
+        thePresident() {
+            for (const member of this.team) {
+                if (member.role.includes("PRESIDENT")) {
+                    return member.name;
+                }
+            }
         },
     },
 });

@@ -192,7 +192,80 @@ section.services .services-cards {
     flex-wrap: wrap;
     align-content: space-between;
     justify-content: space-between;
+    margin-top: 40px;
 }
 section.services .card {
     width: 360px;
+    height: 268px;
+    padding: 45px;
+    border-radius: 0.5rem;
+}
+
+section.services .card-top {
+    margin-bottom: 20px;
+}
+section.services .card-top i:last-child {
+    align-self: flex-start;
+}
+
+/* section.team */
+section.team .left-content {
+    width: 780px;
+}
+section.team .left-content > p {
+    width: 650px;
+}
+section.team .experts-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+section.team .experts-cards .member-card {
+    margin-top: 50px;
+    display: flex;
+    height: 128px;
+}
+section.team .experts-cards .member-card .member-info {
+    padding: 8px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+section.team .experts-cards .member-card .member-info .social {
+    display: flex;
+}
+section.team .experts-cards .member-card .member-info .social span {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.president-speech {
+    width: 360px;
+    height: 476px;
+    padding: 30px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border-radius: 0.3rem;
+}
+.president-speech p.speech {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+.president-speech .signature span:first-child {
+    font-weight: 700;
+}
+
+.member-card img {
+    height: 100%;
+    width: 109px;
+    border-radius: 0.2rem;
+    margin-right: 30px;
 }

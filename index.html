@@ -214,17 +214,155 @@
                             >
                         </div>
                         <div class="services-cards">
-                            <div class="card">ciao</div>
-                            <div class="card">ciao</div>
-                            <div class="card">ciao</div>
-                            <div class="card">ciao</div>
-                            <div class="card">ciao</div>
-                            <div class="card">ciao</div>
+                            <div
+                                class="card"
+                                :style="mainStyle('inherit', colors.background.cardBg)"
+                                v-for="card in servicesCards"
+                            >
+                                <div
+                                    class="card-top dflex"
+                                    :style="mainStyle(colors.text.blueLagoon)"
+                                >
+                                    <i
+                                        :class="card.icon"
+                                        :style="mainStyle('inherit', 'none', '2rem')"
+                                    ></i>
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                                <h3
+                                    class="m-small"
+                                    :style="mainStyle('inherit', 'none', '1.5rem')"
+                                >
+                                    {{card.title}}
+                                </h3>
+                                <p
+                                    :style="mainStyle(colors.text.silverSand, 'none')"
+                                >
+                                    Lorem ipsum, dolor sit amet consectetur
+                                    adipisicing elit. Ratione, quisquam!
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </section>
-                <section class="team">
+                <section class="team p-section">
                     <!-- h: 798 -->
+                    <div class="container">
+                        <small
+                            :style="mainStyle(colors.text.blueLagoon)"
+                            class="m-small"
+                            >WE LIKE WHAT WE DO</small
+                        >
+                        <div class="dflex">
+                            <div class="left-content">
+                                <h2
+                                    :style="mainStyle(colors.text.white, 'none', fonts.sectionTitle)"
+                                >
+                                    <span
+                                        :style="mainStyle(colors.text.blueLagoon, colors.background.fountainBlueFade)"
+                                        class="title-bg"
+                                        >Team</span
+                                    >
+                                    <span
+                                        :style="mainStyle(colors.text.shark, 'none')"
+                                        >of Experts</span
+                                    >
+                                </h2>
+                                <p
+                                    class="light-weight"
+                                    :style="mainStyle(colors.text.shark, 'none', fonts.large)"
+                                >
+                                    Ethics and integrity are the bases on which
+                                    our professionals build their careers. They
+                                    are fundamentals that become daily
+                                    attitudes.
+                                </p>
+                                <div class="experts-cards">
+                                    <div
+                                        class="member-card"
+                                        v-for="member in team"
+                                    >
+                                        <img :src="member.img" />
+                                        <div class="member-info">
+                                            <h3
+                                                :style="mainStyle(colors.text.shark, 'none', '1.5rem')"
+                                            >
+                                                {{member.name}}
+                                            </h3>
+                                            <h4
+                                                :style="mainStyle(colors.text.shark)"
+                                                class="light-weight"
+                                            >
+                                                {{member.role}}
+                                            </h4>
+                                            <span class="social">
+                                                <span
+                                                    :style="mainStyle(colors.text.blueLagoon, colors.background.fountainBlueFade, '1.1rem')"
+                                                    ><i
+                                                        class="fab fa-facebook-f"
+                                                    ></i
+                                                ></span>
+                                                <span
+                                                    :style="mainStyle(colors.text.blueLagoon, colors.background.fountainBlueFade, '1.1rem')"
+                                                    ><i
+                                                        class="fab fa-twitter"
+                                                    ></i
+                                                ></span>
+                                                <span
+                                                    :style="mainStyle(colors.text.blueLagoon, colors.background.fountainBlueFade, '1.1rem')"
+                                                    ><i
+                                                        class="fab fab fa-linkedin-in"
+                                                    ></i
+                                                ></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-content">
+                                <div
+                                    class="president-speech"
+                                    :style="mainStyle(colors.text.greyNurse, colors.background.blueLagoon, fonts.large)"
+                                >
+                                    <h3
+                                        :style="mainStyle(colors.text.white, 'none', '1.6rem')"
+                                    >
+                                        President Speech
+                                    </h3>
+                                    <p class="speech light-weight">
+                                        <span
+                                            >Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Mollitia magnam nihil nobis. Omnis,
+                                            illum hic.</span
+                                        >
+                                        <span
+                                            >Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit.
+                                            Officiis, voluptates!</span
+                                        >
+                                        <span
+                                            >Lorem, ipsum dolor sit amet
+                                            consectetur adipisicing elit. Nulla
+                                            unde provident architecto libero
+                                            cumque nobis illo asperiores ex?
+                                            Minus, eos?</span
+                                        >
+                                    </p>
+                                    <div class="signature dflex">
+                                        <span
+                                            :style="mainStyle(colors.text.greyNurse)"
+                                            v-text="thePresident()"
+                                        ></span
+                                        ><span
+                                            :style="mainStyle(colors.text.abbeyFade, 'none', '1.5rem')"
+                                            ><i class="fas fa-quote-right"></i
+                                        ></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="news">
                     <!-- h: 829 -->
