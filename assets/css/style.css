@@ -431,3 +431,7 @@ footer .top-section .card.links ul {
     flex-direction: column;
     justify-content: space-around;
 }
+
+footer .bottom-section .container {
+    height: 89px;
+}
