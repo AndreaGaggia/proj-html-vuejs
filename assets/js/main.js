@@ -14,6 +14,10 @@ const app = new Vue({
                 icon: "fas fa-envelope",
                 text: "hello@boolean.careers",
             },
+            address: {
+                icon: "fas fa-map-marker-alt",
+                text: "Main Avenue, 987",
+            },
         },
         colors: {
             text: {
@@ -125,6 +129,41 @@ const app = new Vue({
             {
                 bg: "assets/images/news-3.jpg",
                 title: "Working from home is now a trend",
+            },
+        ],
+        footerCards: [
+            {
+                title: "About",
+                listItems: [
+                    "The company",
+                    "Institutional",
+                    "Social & Events",
+                    "Innovation",
+                    "Environment",
+                    "Technology",
+                ],
+            },
+            {
+                title: "Services",
+                listItems: [
+                    "Audit & Assurance",
+                    "Financial Advisory",
+                    "Analytics M&A",
+                    "Middle Marketing",
+                    "Legal Consulting",
+                    "Regulatory Risk",
+                ],
+            },
+            {
+                title: "Support",
+                listItems: [
+                    "Responsibility",
+                    "Terms of Use",
+                    "About Cookies",
+                    "Privacy Policy",
+                    "Accessibility",
+                    "Information",
+                ],
             },
         ],
     },

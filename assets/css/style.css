@@ -17,6 +17,7 @@ span {
 a {
     color: inherit;
     text-decoration: none;
+    display: inline-block;
 }
 li {
     list-style: none;
@@ -236,7 +237,8 @@ section.team .experts-cards .member-card .member-info {
 section.team .experts-cards .member-card .member-info .social {
     display: flex;
 }
-section.team .experts-cards .member-card .member-info .social span {
+section.team .experts-cards .member-card .member-info .social span,
+section.touch .right-content .contact-info span:first-of-type {
     width: 40px;
     height: 40px;
     display: grid;
@@ -324,3 +326,63 @@ section.know form .form-input input::placeholder {
     font-size: 1rem;
     color: grey;
 }
+
+/* section.touch */
+section.touch .container {
+    align-items: flex-start;
+}
+
+section.touch .company-contacts {
+    width: 360px;
+    height: 476px;
+}
+section.touch .company-contacts .contact-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+section.touch form {
+    width: 717px;
+    margin-top: 60px;
+}
+section.touch form .form-row {
+    display: flex;
+    margin-bottom: 20px;
+}
+section.touch form .form-row .form-input {
+    flex: 1;
+}
+section.touch form .form-row .form-input input,
+section.touch select {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #ececec;
+    padding: 15px;
+}
+section.touch form .form-row .form-input input::placeholder,
+section.touch select > option {
+    font-size: 1rem;
+}
+section.touch form .form-row .form-input:first-of-type {
+    margin-right: 16px;
+}
+section.touch textarea {
+    font-family: "Roboto" sans-serif;
+    width: 100%;
+    height: 150px;
+    background-color: #ececec;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 0.3rem;
+    margin-bottom: 30px;
+}
+section.touch textarea::placeholder {
+    font-family: "Roboto", sans-serif;
+}
+
+/* TODO: modifica select e option */
