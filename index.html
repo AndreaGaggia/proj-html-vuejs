@@ -129,7 +129,7 @@
                         Financial executives need to review their strategies,
                         operating models and capabilities so that their areas
                         can generate sound information for better decision
-                        making
+                        making.
                     </p>
                     <div
                         class="video"
@@ -413,8 +413,60 @@
                         </div>
                     </div>
                 </section>
-                <section class="know">
+                <section
+                    class="know p-section"
+                    :style="mainStyle(colors.text.white, colors.background.woodSmoke)"
+                >
                     <!-- h: 456 -->
+                    <div class="container">
+                        <div class="left-content">
+                            <small
+                                :style="mainStyle(colors.text.blueLagoon)"
+                                class="m-small"
+                                >NEWSLETTER</small
+                            >
+                            <h2
+                                :style="mainStyle(colors.text.white, 'none', fonts.sectionTitle)"
+                            >
+                                <span
+                                    :style="mainStyle('inherit', colors.background.fountainBlueFade)"
+                                    class="title-bg"
+                                    >Know</span
+                                >
+                                <span>First</span>
+                            </h2>
+                            <p
+                                class="light-weight"
+                                :style="mainStyle(colors.text.silverSand, 'none', fonts.large)"
+                            >
+                                Follow closely and receive content about our
+                                company and the news of the current market.
+                            </p>
+                        </div>
+                        <form>
+                            <div class="form-input">
+                                <input
+                                    type="text"
+                                    placeholder="Name"
+                                    :style="mainStyle('white', colors.background.cardBg, fonts.large)"
+                                />
+                            </div>
+                            <div class="form-input">
+                                <input
+                                    type="email"
+                                    id=""
+                                    placeholder="Email"
+                                    :style="mainStyle('white', colors.background.cardBg, fonts.large)"
+                                />
+                            </div>
+                            <input
+                                type="submit"
+                                value="SUBSCRIBE"
+                                class="btn"
+                                :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
+                            />
+                        </form>
+                    </div>
                 </section>
                 <section class="touch">
                     <!-- h: 847 -->

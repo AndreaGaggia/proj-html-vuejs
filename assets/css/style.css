@@ -293,3 +293,34 @@ section.news .news-card {
 section.news .news-cards h2 {
     font-weight: normal;
 }
+
+/* section.know */
+section.know > .container {
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+section.know .left-content > p {
+    width: 91%;
+}
+section.know form {
+    padding-left: 30px;
+}
+section.know form .form-input {
+    height: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+section.know form .form-input input {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.2rem;
+    padding: 15px;
+    outline: none;
+    border: none;
+}
+section.know form .form-input input::placeholder {
+    font-size: 1rem;
+    color: grey;
+}
