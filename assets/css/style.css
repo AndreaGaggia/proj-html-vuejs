@@ -386,3 +386,48 @@ section.touch textarea::placeholder {
 }
 
 /* TODO: modifica select e option */
+
+/** FOOTER */
+/* footer.top-section */
+footer {
+    background-image: url(../images/bg-7.jpg);
+    background-size: cover;
+}
+
+footer .top-section .card {
+    width: 262px;
+    height: 331px;
+}
+
+footer .top-section .card.get-in-touch {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+footer .top-section .card.get-in-touch .contacts p {
+    font-weight: 300;
+}
+footer .top-section .card.get-in-touch .contacts p:not(:last-child) {
+    margin-bottom: 20px;
+}
+footer .top-section .card.get-in-touch .contacts a.btn {
+    align-self: flex-start;
+}
+
+footer .top-section .card.links {
+    border-radius: 0.6rem;
+    padding-left: 40px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+footer .top-section .card.links h3 {
+    margin-bottom: 20px;
+}
+footer .top-section .card.links ul {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

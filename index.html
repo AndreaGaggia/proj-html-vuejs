@@ -471,134 +471,128 @@
                 <section class="touch p-section">
                     <!-- h: 847 -->
                     <div class="container dflex">
-                            <div class="left-content">
-                                <small
-                                    :style="mainStyle(colors.text.blueLagoon)"
+                        <div class="left-content">
+                            <small
+                                :style="mainStyle(colors.text.blueLagoon)"
+                                class="m-small"
+                                >SEND A MESSAGE</small
+                            >
+                            <h2
+                                :style="mainStyle(colors.text.white, 'none', fonts.sectionTitle)"
+                            >
+                                <span
+                                    :style="mainStyle(colors.text.shark, 'none')"
+                                    >Get in</span
+                                >
+                                <span
+                                    :style="mainStyle(colors.text.blueLagoon, colors.background.fountainBlueFade)"
+                                    class="title-bg"
+                                    >Touch</span
+                                >
+                            </h2>
+                            <p
+                                class="light-weight"
+                                :style="mainStyle(colors.text.shark, 'none', fonts.large)"
+                            >
+                                We will respond to your message as soon as
+                                possible.
+                            </p>
+                            <form>
+                                <div class="form-row">
+                                    <div class="form-input">
+                                        <input type="text" placeholder="Name" />
+                                    </div>
+                                    <div class="form-input">
+                                        <input
+                                            type="email"
+                                            placeholder="Email"
+                                        />
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-input">
+                                        <input
+                                            type="number"
+                                            placeholder="Phone"
+                                        />
+                                    </div>
+                                    <div class="form-input">
+                                        <select>
+                                            <option value="">More info</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <textarea placeholder="Message"></textarea>
+                                <input
+                                    type="submit"
+                                    value="SEND"
+                                    class="btn"
+                                    :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
+                                />
+                            </form>
+                        </div>
+                        <div class="right-content">
+                            <div
+                                class="company-contacts"
+                                :style="mainStyle(colors.text.shark, 'none', fonts.large)"
+                            >
+                                <h3
+                                    :style="mainStyle('inherit', 'none', '1.6rem')"
                                     class="m-small"
-                                    >SEND A MESSAGE</small
                                 >
-                                <h2
-                                    :style="mainStyle(colors.text.white, 'none', fonts.sectionTitle)"
-                                >
-                                    <span
-                                        :style="mainStyle(colors.text.shark, 'none')"
-                                        >Get in</span
-                                    >
-                                    <span
-                                        :style="mainStyle(colors.text.blueLagoon, colors.background.fountainBlueFade)"
-                                        class="title-bg"
-                                        >Touch</span
-                                    >
-                                </h2>
-                                <p
-                                    class="light-weight"
-                                    :style="mainStyle(colors.text.shark, 'none', fonts.large)"
-                                >
-                                    We will respond to your message as soon as
-                                    possible.
+                                    Example Inc.
+                                </h3>
+                                <p class="light-weight m-small">
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. A, minus.
                                 </p>
-                                <form>
-                                    <div class="form-row">
-                                        <div class="form-input">
-                                            <input
-                                                type="text"
-                                                placeholder="Name"
-                                            />
-                                        </div>
-                                        <div class="form-input">
-                                            <input
-                                                type="email"
-                                                placeholder="Email"
-                                            />
-                                        </div>
-                                    </div>
-                                    <div class="form-row">
-                                        <div class="form-input">
-                                            <input
-                                                type="number"
-                                                placeholder="Phone"
-                                            />
-                                        </div>
-                                        <div class="form-input">
-                                            <select>
-                                                <option value="">
-                                                    More info
-                                                </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <textarea placeholder="Message"></textarea>
-                                    <input
-                                        type="submit"
-                                        value="SEND"
-                                        class="btn"
-                                        :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
-                                    />
-                                </form>
-                            </div>
-                            <div class="right-content">
+                                <p class="light-weight m-small">
+                                    Lorem ipsum dolor sit amet consectetur,
+                                    adipisicing elit. A, minus.
+                                </p>
                                 <div
-                                    class="company-contacts"
-                                    :style="mainStyle(colors.text.shark, 'none', fonts.large)"
+                                    class="contact-info"
+                                    :style="mainStyle(colors.text.blueLagoon)"
                                 >
-                                    <h3
-                                        :style="mainStyle('inherit', 'none', '1.6rem')"
-                                        class="m-small"
-                                    >
-                                        Example Inc.
-                                    </h3>
-                                    <p class="light-weight m-small">
-                                        Lorem ipsum dolor sit amet consectetur,
-                                        adipisicing elit. A, minus.
-                                    </p>
-                                    <p class="light-weight m-small">
-                                        Lorem ipsum dolor sit amet consectetur,
-                                        adipisicing elit. A, minus.
-                                    </p>
-                                    <div
-                                        class="contact-info"
-                                        :style="mainStyle(colors.text.blueLagoon)"
-                                    >
-                                        <p>
-                                            <span
-                                                :style="mainStyle('inherit', colors.background.fountainBlueFade, '1.1rem')"
-                                                ><i
-                                                    :class="contactInfo.tel.icon"
-                                                ></i
-                                            ></span>
-                                            <span class="light-weight"
-                                                >{{contactInfo.tel.text}}</span
-                                            >
-                                        </p>
-                                        <p>
-                                            <span
-                                                :style="mainStyle('inherit', colors.background.fountainBlueFade, '1.1rem')"
-                                                ><i
-                                                    :class="contactInfo.mail.icon"
-                                                ></i
-                                            ></span>
-                                            <span class="light-weight"
-                                                >{{contactInfo.mail.text}}</span
-                                            >
-                                        </p>
-                                        <p>
-                                            <span
-                                                :style="mainStyle('inherit', colors.background.fountainBlueFade, '1.1rem')"
-                                                ><i
-                                                    :class="contactInfo.address.icon"
-                                                ></i
-                                            ></span>
-                                            <span class="light-weight"
-                                                >{{contactInfo.address.text}}</span
-                                            >
-                                        </p>
-                                        <a
-                                            href="#"
-                                            class="btn"
-                                            :style="mainStyle('inherit', 'none', fonts.mid)"
-                                            >VIEW MAP</a
+                                    <p>
+                                        <span
+                                            :style="mainStyle('inherit', colors.background.fountainBlueFade, '1.1rem')"
+                                            ><i
+                                                :class="contactInfo.tel.icon"
+                                            ></i
+                                        ></span>
+                                        <span class="light-weight"
+                                            >{{contactInfo.tel.text}}</span
                                         >
-                                    </div>
+                                    </p>
+                                    <p>
+                                        <span
+                                            :style="mainStyle('inherit', colors.background.fountainBlueFade, '1.1rem')"
+                                            ><i
+                                                :class="contactInfo.mail.icon"
+                                            ></i
+                                        ></span>
+                                        <span class="light-weight"
+                                            >{{contactInfo.mail.text}}</span
+                                        >
+                                    </p>
+                                    <p>
+                                        <span
+                                            :style="mainStyle('inherit', colors.background.fountainBlueFade, '1.1rem')"
+                                            ><i
+                                                :class="contactInfo.address.icon"
+                                            ></i
+                                        ></span>
+                                        <span class="light-weight"
+                                            >{{contactInfo.address.text}}</span
+                                        >
+                                    </p>
+                                    <a
+                                        href="#"
+                                        class="btn"
+                                        :style="mainStyle('inherit', 'none', fonts.mid)"
+                                        >VIEW MAP</a
+                                    >
                                 </div>
                             </div>
                         </div>
@@ -606,11 +600,79 @@
                 </section>
             </main>
             <footer>
-                <div class="top-section">
-                    <!-- h: 621 -->
-                </div>
-                <div class="bottom-section">
-                    <!-- h: 89 -->
+                <div class="container">
+                    <div class="top-section p-section dflex">
+                        <!-- h: 621 -->
+                        <!-- card h331 w262 -->
+                        <div
+                            class="card get-in-touch"
+                            :style="mainStyle(colors.text.silverSand)"
+                        >
+                            <div
+                                class="company-logo"
+                                :style="mainStyle('inherit', 'none', '1.3rem')"
+                            >
+                                <span
+                                    class="first-half"
+                                    :style="mainStyle(colors.text.fountainBlue, colors.background.fountainBlueFade)"
+                                    >NEX</span
+                                ><span class="second-half">GEN</span>
+                            </div>
+                            <p>
+                                A Functional HTML Template for Corporate &
+                                Business
+                            </p>
+                            <div class="contacts">
+                                <p>
+                                    <span
+                                        ><i :class="contactInfo.tel.icon"></i
+                                    ></span>
+                                    <span>{{contactInfo.tel.text}}</span>
+                                </p>
+                                <p>
+                                    <span
+                                        ><i :class="contactInfo.mail.icon"></i
+                                    ></span>
+                                    <span>{{contactInfo.mail.text}}</span>
+                                </p>
+                                <p>
+                                    <span
+                                        ><i
+                                            :class="contactInfo.address.icon"
+                                        ></i
+                                    ></span>
+                                    <span>{{contactInfo.address.text}}</span>
+                                </p>
+                            </div>
+                            <span>
+                                <a
+                                    href=""
+                                    class="btn"
+                                    :style="mainStyle(colors.text.white, 'none', fonts.mid)"
+                                    >GET IN TOUCH</a
+                                >
+                            </span>
+                        </div>
+                        <div
+                            class="card links"
+                            v-for="card in footerCards"
+                            :style="mainStyle(colors.text.silverSand, '#ffffff0f')"
+                        >
+                            <h3 :style="mainStyle('white')">{{card.title}}</h3>
+                            <ul>
+                                <li
+                                    v-for="link in card.listItems"
+                                    class="light-weight"
+                                >
+                                    <i class="fas fa-chevron-right"></i>
+                                    <a href="#">{{link}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottom-section">
+                        <!-- h: 89 -->
+                    </div>
                 </div>
             </footer>
         </div>
@@ -619,5 +681,3 @@
         <script src="./assets/js/main.js"></script>
     </body>
 </html>
-
-<i class="fas fa-phone-alt"></i>
