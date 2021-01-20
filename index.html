@@ -364,8 +364,54 @@
                         </div>
                     </div>
                 </section>
-                <section class="news">
+                <section
+                    class="news p-section"
+                    :style="mainStyle('inherit', colors.background.greyNurse)"
+                >
                     <!-- h: 829 -->
+                    <div class="container">
+                        <small
+                            :style="mainStyle(colors.text.blueLagoon)"
+                            class="m-small"
+                            >OUR EDITORIAL CONTENT</small
+                        >
+                        <h2
+                            :style="mainStyle(colors.text.shark, 'none', fonts.sectionTitle)"
+                        >
+                            <span>Latest</span>
+                            <span
+                                :style="mainStyle(colors.text.blueLagoon, colors.background.fountainBlueFade)"
+                                class="title-bg"
+                                >News</span
+                            >
+                        </h2>
+                        <div class="content-pair dflex">
+                            <p
+                                class="light-weight"
+                                :style="mainStyle(colors.text.abbey, 'none', fonts.large)"
+                            >
+                                Every week we publish content about what is best
+                                in the business world.
+                            </p>
+                            <a
+                                href=""
+                                class="btn"
+                                :style="mainStyle(colors.text.white, colors.background.blueLagoon, fonts.mid)"
+                                >SEE ALL</a
+                            >
+                        </div>
+                        <div class="news-cards">
+                            <div
+                                class="news-card"
+                                v-for="news in newsCards"
+                                :style="`background-image: url(${news.bg})`"
+                            >
+                                <h2 :style="mainStyle(colors.text.white)">
+                                    {{news.title}}
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="know">
                     <!-- h: 456 -->

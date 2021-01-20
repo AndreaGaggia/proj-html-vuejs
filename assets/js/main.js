@@ -35,6 +35,7 @@ const app = new Vue({
                 woodSmoke: "#111117",
                 shark: "#1d2528",
                 cardBg: "#19191f",
+                greyNurse: "#e7eee9",
             },
         },
         fonts: {
@@ -110,6 +111,20 @@ const app = new Vue({
                 name: "T. Johnson",
                 role: "CTO & PRESIDENT",
                 img: "./assets/images/team-4.jpg",
+            },
+        ],
+        newsCards: [
+            {
+                bg: "assets/images/news-1.jpg",
+                title: "Increasing creativity is possible for everyone",
+            },
+            {
+                bg: "assets/images/news-2.jpg",
+                title: "Beacuse market reasearch is part of the business plan",
+            },
+            {
+                bg: "assets/images/news-3.jpg",
+                title: "Working from home is now a trend",
             },
         ],
     },

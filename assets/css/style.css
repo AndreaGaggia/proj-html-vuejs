@@ -269,3 +269,27 @@ section.team .experts-cards .member-card .member-info .social span {
     border-radius: 0.2rem;
     margin-right: 30px;
 }
+
+/* section.news */
+section.news .news-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+section.news .news-card {
+    height: 360px;
+    width: 360px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 0.5rem;
+    background-size: contain;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: overlay;
+}
+section.news .news-cards h2 {
+    font-weight: normal;
+}
