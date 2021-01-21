@@ -392,17 +392,58 @@
                                 Every week we publish content about what is best
                                 in the business world.
                             </p>
-                            <a class="btn full">SEE ALL</a>
+                            <a
+                                class="btn full"
+                                @click="allNews = !allNews"
+                                v-text="allNews ? 'SHOW LESS' : 'SHOW ALL'"
+                            ></a>
                         </div>
                         <div class="news-cards">
                             <div
                                 class="news-card"
                                 v-for="news in newsCards"
                                 :style="`background-image: url(${news.bg})`"
+                                @mouseenter="news.details = !news.details"
+                                @mouseleave="news.details = !news.details"
                             >
+                                <div class="author-date" v-if="news.details">
+                                    <span
+                                        ><i :class="contactInfo.hours.icon"></i>
+                                        {{news.author}}</span
+                                    >
+                                    <span
+                                        ><i class="far fa-user"></i>
+                                        {{news.date}}</span
+                                    >
+                                </div>
                                 <h2 :style="mainStyle(colors.text.white)">
                                     {{news.title}}
                                 </h2>
+                                <p v-if="news.details">{{news.subtitle}}</p>
+                            </div>
+                        </div>
+                        <div class="news-cards other-news" v-if="allNews">
+                            <div
+                                class="news-card"
+                                v-for="news in otherNewsCards"
+                                :style="`background-image: url(${news.bg})`"
+                                @mouseenter="news.details = !news.details"
+                                @mouseleave="news.details = !news.details"
+                            >
+                                <div class="author-date" v-if="news.details">
+                                    <span
+                                        ><i :class="contactInfo.hours.icon"></i>
+                                        {{news.author}}</span
+                                    >
+                                    <span
+                                        ><i class="far fa-user"></i>
+                                        {{news.date}}</span
+                                    >
+                                </div>
+                                <h2 :style="mainStyle(colors.text.white)">
+                                    {{news.title}}
+                                </h2>
+                                <p v-if="news.details">{{news.subtitle}}</p>
                             </div>
                         </div>
                     </div>

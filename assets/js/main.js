@@ -129,16 +129,52 @@ const app = new Vue({
             {
                 bg: "assets/images/news-1.jpg",
                 title: "Increasing creativity is possible for everyone",
+                details: false,
+                author: "Andrea Miller",
+                date: "2 Days Ago",
+                subtitle:
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, enim?",
             },
             {
                 bg: "assets/images/news-2.jpg",
                 title: "Beacuse market reasearch is part of the business plan",
+                details: false,
+                author: "Andrea Miller",
+                date: "2 Days Ago",
+                subtitle:
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, enim?",
             },
             {
                 bg: "assets/images/news-3.jpg",
                 title: "Working from home is now a trend",
+                details: false,
+                author: "Andrea Miller",
+                date: "2 Days Ago",
+                subtitle:
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, enim?",
             },
         ],
+        otherNewsCards: [
+            {
+                bg: "assets/images/news-4.jpg",
+                title: "Love the smell of my new agenda",
+                details: false,
+                author: "Andrea Miller",
+                date: "2 Days Ago",
+                subtitle:
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, enim?",
+            },
+            {
+                bg: "assets/images/news-5.jpg",
+                title: "The entire morning trying to log in...",
+                details: false,
+                author: "Andrea Miller",
+                date: "2 Days Ago",
+                subtitle:
+                    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, enim?",
+            },
+        ],
+        allNews: false,
         footerCards: [
             {
                 title: "About",

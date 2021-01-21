@@ -346,22 +346,47 @@ section.news .news-cards {
     justify-content: space-between;
     margin-top: 50px;
 }
+section.news .news-cards.other-news {
+    justify-content: flex-start;
+    margin-top: calc((1140px - 360px * 3) / 2);
+}
+section.news .news-cards.other-news .news-card:not(:last-child) {
+    margin-right: calc((1140px - 360px * 3) / 2);
+}
 section.news .news-card {
     height: 360px;
     width: 360px;
-    padding-bottom: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 50px 40px;
     border-radius: 0.5rem;
     background-size: contain;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: overlay;
 }
+section.news .news-card:hover {
+    background-color: #048383;
+    background-blend-mode: multiply;
+}
+section.news .news-card .author-date,
+section.news .news-card p {
+    color: #ffffff;
+}
+section.news .news-card .author-date {
+    align-self: start;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
 section.news .news-cards h2 {
     font-weight: normal;
+}
+
+.detail {
+    display: none;
 }
 
 /* section.know */
