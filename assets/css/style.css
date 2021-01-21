@@ -105,17 +105,43 @@ header .contact-info .content i {
 }
 .hero {
     height: 919px;
-    background-image: url("../images/bg-2.jpg");
     background-size: cover;
     display: grid;
     grid-template-rows: auto 1fr;
     /* overlay effect */
     background-color: #00000057;
     background-blend-mode: color;
+    position: relative;
+    transition: 0.3s ease;
+}
+.hero .container:first-child {
+    position: absolute;
+    inset: 0;
+}
+.hero .dots {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.hero .dots span {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #048383;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.hero .dots span:hover {
+    border-color: #52babb;
 }
 
 .navbar {
     padding-top: 20px;
+    z-index: 1;
 }
 .navbar .right-content a:not(:last-child) {
     margin-right: 30px;
@@ -135,6 +161,9 @@ header .contact-info .content i {
 .claim-message {
     margin: 40px 0;
     line-height: 1.5rem;
+}
+.claim .buttons-pair {
+    z-index: 1;
 }
 .claim .buttons-pair > a:first-child {
     margin-right: 20px;

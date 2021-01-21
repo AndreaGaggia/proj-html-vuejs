@@ -1,6 +1,8 @@
 const app = new Vue({
     el: "#app",
     data: {
+        heroBg: 2,
+        dots: [2, 1, 3],
         contactInfo: {
             hours: {
                 icon: "fas fa-clock",

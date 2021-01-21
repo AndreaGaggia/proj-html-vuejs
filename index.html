@@ -44,7 +44,19 @@
                         </span>
                     </div>
                 </div>
-                <section class="hero">
+                <section
+                    class="hero"
+                    :style="`background-image: url(./assets/images/bg-${heroBg}.jpg)`"
+                >
+                    <div class="container">
+                        <div class="dots">
+                            <span
+                                v-for="n in dots"
+                                @click="heroBg = n"
+                                :style="heroBg === n ? mainStyle('inherit', colors.background.blueLagoon) : ''"
+                            ></span>
+                        </div>
+                    </div>
                     <nav class="navbar container dflex">
                         <div class="company-logo">
                             <span
