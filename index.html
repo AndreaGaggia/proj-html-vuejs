@@ -647,6 +647,11 @@
                         >
                             <div class="color-dots" v-if="selectValue">
                                 <!-- TODO -->
+                                <span
+                                    v-for="n in altColors"
+                                    :style="`background-color: ${n.primary}`"
+                                    @click="alternativeColors(n)"
+                                ></span>
                             </div>
                             <div
                                 class="company-logo"
@@ -654,7 +659,7 @@
                             >
                                 <span
                                     class="first-half"
-                                    :style="mainStyle(colors.text.fountainBlue, colors.background.fountainBlueFade)"
+                                    :style="colors.text.altPrimary ? mainStyle(colors.text.altPrimary, colors.background.altFade) : mainStyle(colors.text.fountainBlue, colors.background.fountainBlueFade)"
                                     >NEX</span
                                 ><span class="second-half">GEN</span>
                             </div>

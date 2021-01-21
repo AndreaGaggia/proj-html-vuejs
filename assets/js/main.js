@@ -33,6 +33,7 @@ const app = new Vue({
                 abbey: "#4e4f52",
                 greyNurse: "#e7eee9",
                 abbeyFade: "rgb(78 79 82 / 70%)",
+                altPrimary: null,
             },
             background: {
                 contactInfoBg: "#21333e",
@@ -42,6 +43,7 @@ const app = new Vue({
                 shark: "#1d2528",
                 cardBg: "#19191f",
                 greyNurse: "#e7eee9",
+                altFade: null,
             },
         },
         fonts: {
@@ -211,6 +213,20 @@ const app = new Vue({
             },
         ],
         selectValue: null,
+        altColors: [
+            {
+                primary: "#ad6a35",
+                faded: "#fead613d",
+            },
+            {
+                primary: "#ff0000",
+                faded: "#ff110060",
+            },
+            {
+                primary: "#008000",
+                faded: "#11e0113d",
+            },
+        ],
     },
     methods: {
         mainStyle(text, bg, font) {
@@ -230,9 +246,11 @@ const app = new Vue({
             card.onHover = false;
         },
         easterEgg() {
-            console.log(this.selectValue);
-            console.log(window);
             window.scrollTo(0, document.body.scrollHeight);
+        },
+        alternativeColors(color) {
+            this.colors.text.altPrimary = color.primary;
+            this.colors.background.altFade = color.faded;
         },
     },
 });
