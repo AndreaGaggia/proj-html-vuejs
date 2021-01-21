@@ -210,6 +210,7 @@ const app = new Vue({
                 ],
             },
         ],
+        selectValue: null,
     },
     methods: {
         mainStyle(text, bg, font) {
@@ -227,6 +228,11 @@ const app = new Vue({
         },
         notOnHover(card) {
             card.onHover = false;
+        },
+        easterEgg() {
+            console.log(this.selectValue);
+            console.log(window);
+            window.scrollTo(0, document.body.scrollHeight);
         },
     },
 });

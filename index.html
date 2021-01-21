@@ -409,17 +409,19 @@
                                 <div class="author-date" v-if="news.details">
                                     <span
                                         ><i :class="contactInfo.hours.icon"></i>
-                                        {{news.author}}</span
+                                        {{news.date}}</span
                                     >
                                     <span
                                         ><i class="far fa-user"></i>
-                                        {{news.date}}</span
+                                        {{news.author}}</span
                                     >
                                 </div>
-                                <h2 :style="mainStyle(colors.text.white)">
-                                    {{news.title}}
-                                </h2>
-                                <p v-if="news.details">{{news.subtitle}}</p>
+                                <div class="news-text">
+                                    <h2 :style="mainStyle(colors.text.white)">
+                                        {{news.title}}
+                                    </h2>
+                                    <p v-if="news.details">{{news.subtitle}}</p>
+                                </div>
                             </div>
                         </div>
                         <div class="news-cards other-news" v-if="allNews">
@@ -433,17 +435,19 @@
                                 <div class="author-date" v-if="news.details">
                                     <span
                                         ><i :class="contactInfo.hours.icon"></i>
-                                        {{news.author}}</span
+                                        {{news.date}}</span
                                     >
                                     <span
                                         ><i class="far fa-user"></i>
-                                        {{news.date}}</span
+                                        {{news.author}}</span
                                     >
                                 </div>
-                                <h2 :style="mainStyle(colors.text.white)">
-                                    {{news.title}}
-                                </h2>
-                                <p v-if="news.details">{{news.subtitle}}</p>
+                                <div class="news-text">
+                                    <h2 :style="mainStyle(colors.text.white)">
+                                        {{news.title}}
+                                    </h2>
+                                    <p v-if="news.details">{{news.subtitle}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -551,8 +555,13 @@
                                         />
                                     </div>
                                     <div class="form-input">
-                                        <select>
-                                            <option value="">More info</option>
+                                        <select
+                                            v-model="selectValue"
+                                            @change="easterEgg()"
+                                        >
+                                            <option value="LOGO">
+                                                LOGO 🥚
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
@@ -632,12 +641,13 @@
             <footer>
                 <div class="container">
                     <div class="top-section p-section dflex">
-                        <!-- h: 621 -->
-                        <!-- card h331 w262 -->
                         <div
                             class="card get-in-touch"
                             :style="mainStyle(colors.text.silverSand)"
                         >
+                            <div class="color-dots" v-if="selectValue">
+                                <!-- TODO -->
+                            </div>
                             <div
                                 class="company-logo"
                                 :style="mainStyle('inherit', 'none', '1.3rem')"
